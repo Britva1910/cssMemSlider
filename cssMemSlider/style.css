@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: auto;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider {
+    width: 60rem;
+    height: 35rem;
+    overflow: hidden;
+}
+
+.wrapper-control {
+    height: 5rem;
+    width: 60rem;
+    background-color: cornflowerblue;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    overflow: hidden;
+}
+
+.navigation {
+    background-color: cornflowerblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.titles {
+    height: 100%;
+    width: 500%;
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    width: 20%;
+    transition: all .9s ease;
+    font-size: 2em;
+}
+
+.bar {
+    height: 20px;
+    width: 20px;
+    margin: 6px;
+    cursor: pointer;
+    background-color: blue;
+    opacity: .5;
+    border-radius: 10px;
+    transition: all .4s ease;
+}
+
+.bar:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+}
+
+input[name="r"] {
+    position: absolute;
+    visibility: hidden;
+}
+
+.slides {
+    width: 500%;
+    height: 100%;
+    display: flex;
+}
+
+.slide {
+    width: 20%;
+    transition: all .6s ease;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+#r1:checked~.slider .slides .s1,
+#r1:checked~.wrapper-control .titles .t1 {
+    margin-left: 0;
+}
+
+#r2:checked~.slider .slides .s1,
+#r2:checked~.wrapper-control .titles .t1 {
+    margin-left: -20%;
+}
+
+#r3:checked~.slider .slides .s1,
+#r3:checked~.wrapper-control .titles .t1 {
+    margin-left: -40%;
+}
+
+#r4:checked~.slider .slides .s1,
+#r4:checked~.wrapper-control .titles .t1 {
+    margin-left: -60%;
+}
+
+#r5:checked~.slider .slides .s1,
+#r5:checked~.wrapper-control .titles .t1 {
+    margin-left: -80%;
+}
